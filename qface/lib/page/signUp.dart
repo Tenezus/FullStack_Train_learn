@@ -53,7 +53,7 @@ class _signUpState extends State<signUp> {
     }
     //uploading data
     final database = Supabase.instance.client;
-    //url example https://qxfmtqrnjdfiptrfpzsq.supabase.co/storage/v1/object/public/profil/uploads/1755293603569
+    //url example https://YourProjectUrl/storage/v1/object/public/profil/uploads/1755293603569
     //upload profile picture
     if(_imageFile != null){
       isUploading = true;

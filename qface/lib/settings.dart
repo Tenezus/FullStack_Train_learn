@@ -85,7 +85,7 @@ class _settingsState extends State<settings> {
                                           context: context,
                                           builder: (context)=>AlertDialog(
                                             backgroundColor: Color(0xfff2f2f2),
-                                            content: Image.network("https://qxfmtqrnjdfiptrfpzsq.supabase.co/storage/v1/object/public/profil/uploads/"+post.user_photo),
+                                            content: Image.network("https://YourSupabaseProjectUrl/storage/v1/object/public/profil/uploads/"+post.user_photo),
                                           )
                                       )
                                     },
@@ -93,7 +93,7 @@ class _settingsState extends State<settings> {
                                       name: post.author,
                                       radius: 25,
                                       fontsize: 21,
-                                      img: "https://qxfmtqrnjdfiptrfpzsq.supabase.co/storage/v1/object/public/profil/uploads/"+post.user_photo,
+                                      img: "https://YourSupabaseProjectUrl/storage/v1/object/public/profil/uploads/"+post.user_photo,
                                     ),
                                   ),
                                   SizedBox(width: 10,),

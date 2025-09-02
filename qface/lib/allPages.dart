@@ -69,13 +69,13 @@ class _allPagesState extends State<allPages> {
                                       children: [
                                         GestureDetector(
                                           onTap: ()=>{showDialog(context: context, builder: (context)=>AlertDialog(
-                                            content: Image.network("https://qxfmtqrnjdfiptrfpzsq.supabase.co/storage/v1/object/public/profil/uploads/"+user_photo),
+                                            content: Image.network("https://YourSupabaseUrl/storage/v1/object/public/profil/uploads/"+user_photo),
                                           ))},
                                           child: ProfilePicture(
                                             name: username,
                                             fontsize: 12,
                                             radius: 50,
-                                            img: "https://qxfmtqrnjdfiptrfpzsq.supabase.co/storage/v1/object/public/profil/uploads/"+user_photo,
+                                            img: "https://YourSupabaseUrl/storage/v1/object/public/profil/uploads/"+user_photo,
                                           ),
                                         ),
 

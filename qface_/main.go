@@ -57,7 +57,7 @@ var quotes []Quotes
 func getAllQuotes(c *gin.Context) {
 	//connection to the postgres database on supabase
 	var conn *pgx.Conn
-	conn, err := pgx.Connect(context.Background(), "postgresql://postgres.qxfmtqrnjdfiptrfpzsq:jevaisalecole@aws-0-eu-north-1.pooler.supabase.com:6543/postgres")
+	conn, err := pgx.Connect(context.Background(), "postgresql://postgres.qxfmtqrnjdfiptrfpzsq:jYourPassword@aws-0-eu-north-1.pooler.supabase.com:6543/postgres")
 	if err != nil {
 		log.Fatalf("failed to connect to the database: %v", err)
 	}
@@ -98,7 +98,7 @@ func postQuote(c *gin.Context) {
 
 	//connexion a la base de donnees:
 	//var conn *pgx.Conn
-	conn, err := sql.Open("postgres", "host=aws-0-eu-north-1.pooler.supabase.com port=6543 user=postgres.qxfmtqrnjdfiptrfpzsq password=jevaisalecole dbname=postgres sslmode=disable")
+	conn, err := sql.Open("postgres", "host=aws-0-eu-north-1.pooler.supabase.com port=6543 user=postgres.qxfmtqrnjdfiptrfpzsq password=YourPassWord dbname=postgres sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -109,7 +109,7 @@ func postQuote(c *gin.Context) {
 		log.Fatal(err)
 	}
 
-	//conn, _ := pgxpool.New(context.Background(),"postgresql://postgres.qxfmtqrnjdfiptrfpzsq:jevaisalecole@aws-0-eu-north-1.pooler.supabase.com:6543/postgres")
+	//conn, _ := pgxpool.New(context.Background(),"postgresql://postgres.qxfmtqrnjdfiptrfpzsq:YourPassWord@aws-0-eu-north-1.pooler.supabase.com:6543/postgres")
 	//defer conn.Close()
 
 	sql := `insert into quote(content, author, user_photo) values($1, $2, $3)`
@@ -126,7 +126,7 @@ func myQuote(c *gin.Context) {
 	author := c.Query("author")
 
 	//connexion a la base de donnee
-	conn, err := sql.Open("postgres", "host=aws-0-eu-north-1.pooler.supabase.com port=6543 user=postgres.qxfmtqrnjdfiptrfpzsq password=jevaisalecole dbname=postgres sslmode=disable")
+	conn, err := sql.Open("postgres", "host=aws-0-eu-north-1.pooler.supabase.com port=6543 user=postgres.qxfmtqrnjdfiptrfpzsq password=YourPassWord dbname=postgres sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -163,7 +163,7 @@ func myQuote(c *gin.Context) {
 func fiveBest(c *gin.Context) {
 	//connection to the postgres database on supabase
 	var conn *pgx.Conn
-	conn, err := pgx.Connect(context.Background(), "postgresql://postgres.qxfmtqrnjdfiptrfpzsq:jevaisalecole@aws-0-eu-north-1.pooler.supabase.com:6543/postgres")
+	conn, err := pgx.Connect(context.Background(), "postgresql://postgres.qxfmtqrnjdfiptrfpzsq:YourPassWord@aws-0-eu-north-1.pooler.supabase.com:6543/postgres")
 	if err != nil {
 		log.Fatalf("failed to connect to the database: %v", err)
 	}

@@ -7,8 +7,8 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 void main() async {
   //supabase initialisation
   await Supabase.initialize(
-      url: "https://qxfmtqrnjdfiptrfpzsq.supabase.co",
-      anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF4Zm10cXJuamRmaXB0cmZwenNxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQxNzc5MDEsImV4cCI6MjA2OTc1MzkwMX0.29C3HfFi8O3S9Z6PE1htx1nkg7kwI6iWSsB1fHjvVhA"
+      url: "Your supabase project's url",
+      anonKey: "Your project's anonKey"
   );
 
   //initialize hive database
